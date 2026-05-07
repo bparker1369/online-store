@@ -1,6 +1,8 @@
 
 package com.pluralsight;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -58,6 +60,30 @@ public class Store {
     public static void loadInventory(String fileName, ArrayList<Product> inventory) {
         // TODO: read each line, split on "|",
         //       create a Product object, and add it to the inventory list
+
+        try {
+            File file = new File(fileName);
+
+            Scanner fileScanner = new Scanner(file);
+
+            while (fileScanner.hasNextLine()){
+                String line = fileScanner.nextLine();
+
+                String[] parts = line.split("\\|");
+
+                String id = parts[0];
+                String productName = parts[1];
+                double price = Double.parseDouble(parts[2]);
+
+                Product product = new Product(id, productName, price);
+
+                inventory.add(product);
+
+            }
+        } catch (Exception e) {
+            System.out.println("Error Reading The File");
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -69,6 +95,25 @@ public class Store {
                                        Scanner scanner) {
         // TODO: show each product (id, name, price),
         //       prompt for an id, find that product, add to cart
+        for (int i = 0; i < inventory.size(); i++){
+            Product p = inventory.get(i);
+
+            System.out.println(p.getId() + " | " + p.getProductName() + " | " + p.getPrice());
+        }
+
+        System.out.println("Please enter product id: ");
+        String id = scanner.nextLine().trim();
+
+        Product found = findProductById(id, inventory);
+
+        if (found == null){
+            System.out.println("Product Not Found, Please try again.");
+        } else{
+            cart.add(found);
+            System.out.println("Product Added To Cart!");
+        }
+
+
     }
 
     /**
