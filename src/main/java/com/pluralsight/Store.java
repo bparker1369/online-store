@@ -148,6 +148,14 @@ public class Store {
      */
     public static Product findProductById(String id, ArrayList<Product> inventory) {
         // TODO: loop over the list and compare ids
+        for (int i = 0; i < inventory.size(); i++){
+            Product p = inventory.get(i);
+
+            if (p.getId().equalsIgnoreCase(id)){
+                return p;
+            }
+        }
+
         return null;
     }
 }
