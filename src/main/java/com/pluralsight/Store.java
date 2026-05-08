@@ -139,7 +139,7 @@ public class Store {
         System.out.println("Cart Total: $" + total);
         System.out.println("Would you like to check out?");
         System.out.println("Enter C to checkout");
-        System.out.print("Enter X to Exit");
+        System.out.println("Enter X to Exit");
 
         String choice = scanner.nextLine().trim();
 
@@ -160,6 +160,41 @@ public class Store {
                                 double totalAmount,
                                 Scanner scanner) {
         // TODO: implement steps listed above
+        System.out.println("Are you sure you want to checkout? ");
+        System.out.println("Enter Y to checkout");
+        System.out.println("Enter N to exit");
+        String choice = scanner.nextLine().trim();
+
+        if (choice.equalsIgnoreCase("Y")){
+            System.out.print("Enter Payment Amount: ");
+            double payment = Double.parseDouble(scanner.nextLine().trim());
+
+            if (payment < totalAmount){
+                System.out.println("Insufficient payment. Transaction could not be completed.");
+                return;
+            }
+
+            double change = payment - totalAmount;
+
+            System.out.println("=========== RECEIPT ===========");
+
+            for (int i = 0; i < cart.size(); i++){
+                Product p = cart.get(i);
+
+                System.out.println(p.getId() + " | " + p.getProductName() + " | " + p.getPrice());
+
+                System.out.println("=============================");
+                System.out.println("Total: $" + String.format("%.2f", totalAmount));
+                System.out.println("Payment: $" + String.format("%.2f", payment));
+                System.out.println("Change: $" + String.format("%.2f", change));
+                System.out.println("Thank you for shopping with us!");
+                cart.clear();
+            }
+
+
+
+
+        }
 
 
     }
