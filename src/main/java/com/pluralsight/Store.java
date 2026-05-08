@@ -136,6 +136,17 @@ public class Store {
 
             total += p.getPrice();
         }
+        System.out.println("Cart Total: $" + total);
+        System.out.println("Would you like to check out?");
+        System.out.println("Enter C to checkout");
+        System.out.print("Enter X to Exit");
+
+        String choice = scanner.nextLine().trim();
+
+        if (choice.equalsIgnoreCase("C")){
+            checkOut(cart, total, scanner);
+        }
+
     }
 
     /**
@@ -149,6 +160,8 @@ public class Store {
                                 double totalAmount,
                                 Scanner scanner) {
         // TODO: implement steps listed above
+
+
     }
 
     /**
