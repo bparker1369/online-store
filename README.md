@@ -1,15 +1,19 @@
 # Project Title
 
+Brandon's Online Store
 ## Description of the Project
 
-Briefly describe what this Java console application does. Mention its purpose and who the intended users are. Explain the main functionality and what problems it aims to solve.
 
+"This is a Java shopping application that simulates an online store. 
+It allows customers to browse a catalog of products, add items to their shopping cart, and complete purchases. 
+The app stores all product data in a CSV file and provides a menu for shopping. 
+It's designed for anyone who wants to practice building an e-commerce experience using Java."
 ## User Stories
 
-List the user stories that guided the development of your application. Format these stories as: "As a [type of user], I want [some goal] so that [some reason]."
-
-- As a user, I want to be able to input my data, so that the application can process it accordingly.
-- As a user, I want to receive immediate feedback, so I can understand what to do next.
+- As a customer, I want to view all available products so that I can decide what to buy
+- As a customer, I want to add products to my cart so that I can purchase multiple items at once
+- As a customer, I want to see my total cost before checkout so that I know how much I'm spending
+- As a customer, I want to receive a receipt after checkout so that I have a record of my purchase
 
 ## Setup
 
@@ -32,38 +36,28 @@ Follow these steps to get your application running within IntelliJ IDEA:
 
 ## Technologies Used
 
-- Java: Mention the version you are using.
-- Any additional libraries or frameworks used in the project.
+- Java: 17
+- GitHub
 
 ## Demo
 
-Include screenshots or GIFs that show your application in action. Use tools like [Giphy Capture](https://giphy.com/apps/giphycapture) to record a GIF of your application.
-
-![Application Screenshot](path/to/your/screenshot.png)
+![Cool Demo](onlineStoreGif.gif)
 
 ## Future Work
 
-Outline potential future enhancements or functionalities you might consider adding:
+- Add a GUI instead of CLI so it's easier to use
 
-- Additional feature to be developed.
-- Improvement of current functionalities.
+- Add a search and filter feature so customers can find products by name or price range
 
 ## Resources
 
-List resources such as tutorials, articles, or documentation that helped you during the project.
-
-- [Java Programming Tutorial](https://www.example.com)
-- [Effective Java](https://www.example.com)
+- Raymond's Github Notes
 
 ## Team Members
 
-- **Name 1** - Specific contributions or roles.
-- **Name 2** - Specific contributions or roles.
+- **Name 1** - Brandon Parker (App developer)
+- **Name 2** - Raymond Mauron (Provided Skeleton code)
 
 ## Thanks
 
-Express gratitude towards those who provided help, guidance, or resources:
-
-- Thank you to [Mentor's Name] for continuous support and guidance.
-- A special thanks to all teammates for their dedication and teamwork.
- 
+Thank you Raymond for the Support through class & the notes/resources. Also thank you (the viewer) for trying out my application!
